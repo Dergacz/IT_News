@@ -1,6 +1,5 @@
-import { MainPage, AboutPage } from "pages"
 import { Suspense } from "react"
-import { Routes, Route } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { routeConfig } from "shared/config/roteConfig/routeConfig"
 
 export const AppRouter = () => {
