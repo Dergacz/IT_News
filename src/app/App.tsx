@@ -1,16 +1,18 @@
 import { AppRouter } from "app/providers/providers/router";
 import { classNames } from "shared";
-import { Sidebar } from "widgets/Sidebar/ui/Sidebar";
-import { useTheme } from "../providers/ThemeProvider/useTheme";
-import '../styles/index.scss';
+import { useTheme } from "./providers/ThemeProvider/useTheme";
+import { Sidebar } from "widgets/Sidebar";
+import { Navbar } from "widgets/Navbar";
+import './styles/index.scss';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Sidebar />
+      <Navbar />
       <div>
-        <button onClick={toggleTheme}>change theme</button>
         <AppRouter />
       </div>
     </div>
