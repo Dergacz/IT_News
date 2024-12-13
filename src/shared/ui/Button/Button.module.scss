@@ -1,3 +1,39 @@
 .Button {
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 
+  &.primary {
+    background: var(--primary-button-color);
+    color: var(--primary-font-color);
+    border: none;
+
+    &:hover {
+      background: var(--secondary-button-color);
+    }
+  }
+
+  &.secondary {
+    background: transparent;
+    border: 2px solid var(--primary-button-color);
+    color: var(--primary-font-color);
+
+    &:hover {
+      background: var(--primary-button-color);
+      color: var(--bg-color);
+    }
+  }
+
+  &.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-font-color);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

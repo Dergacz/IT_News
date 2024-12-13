@@ -1,0 +1,11 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  width: calc(100% - 220px);
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
