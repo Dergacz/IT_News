@@ -1,11 +1,9 @@
 .Navbar {
-  position: fixed;
-  top: 0;
-  left: 220px;
-  width: calc(100% - 220px);
-  height: 60px;
-  padding: 20px;
+  width: calc(100% - var(--sidebar-width));
+  height: var(--navbar-height);
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  margin-left: var(--sidebar-width);
 }
