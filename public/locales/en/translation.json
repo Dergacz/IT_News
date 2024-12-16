@@ -1,3 +1,5 @@
 {
-  "language": "Ru"
+  "language": "Ru",
+  "main": "Main",
+  "about": "About"
 }
