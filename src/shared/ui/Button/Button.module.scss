@@ -5,8 +5,8 @@
   transition: all 0.2s ease;
 
   &.primary {
-    background: var(--primary-button-color);
     color: var(--primary-font-color);
+    background: var(--primary-button-color);
     border: none;
 
     &:hover {
@@ -15,22 +15,24 @@
   }
 
   &.secondary {
+    color: var(--primary-font-color);
     background: transparent;
     border: 2px solid var(--primary-button-color);
-    color: var(--primary-font-color);
 
     &:hover {
-      background: var(--primary-button-color);
       color: var(--bg-color);
+      background: var(--primary-button-color);
     }
   }
 
   &.clear {
     padding: 0;
-    border: none;
-    background: none;
-    outline: none;
+
     color: var(--primary-font-color);
+
+    background: none;
+    border: none;
+    outline: none;
 
     &:hover {
       opacity: 0.8;
