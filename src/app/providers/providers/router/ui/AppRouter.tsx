@@ -14,6 +14,7 @@ export const AppRouter = () => {
               element={(
                 <div className="page-wrapper">
                   {element}
+                  text
                 </div>
               )}
             />
