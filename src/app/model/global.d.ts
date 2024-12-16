@@ -30,3 +30,5 @@ declare module '*.gif' {
   const value: string;
   export default value;
 }
+
+declare const __IS_DEV__: boolean;
