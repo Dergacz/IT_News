@@ -1,5 +1,4 @@
 import { AboutPage, MainPage } from "pages";
-import About from "pages/AboutPage/ui/AboutPage";
 import { RouteProps } from "react-router-dom";
 
 export enum AppRoutes {
