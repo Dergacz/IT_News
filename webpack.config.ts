@@ -20,6 +20,7 @@ export default (env: BuildEnv) => {
     paths,
     isDev,
     port: PORT,
+    analyze: env.analyze,
   });
 
   return config;
