@@ -34,6 +34,12 @@ export default [
       }]
     }
   },
+  {
+    files: ["**/*.test.{ts,tsx}"],
+    rules: {
+      "i18next/no-literal-string": "off"
+    }
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
