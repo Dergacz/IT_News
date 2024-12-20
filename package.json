@@ -36,6 +36,7 @@
     "@types/webpack": "^5.28.5",
     "@types/webpack-bundle-analyzer": "^4.7.0",
     "@types/webpack-dev-server": "^4.7.2",
+    "babel-jest": "^29.7.0",
     "css-loader": "^6.6.0",
     "eslint": "^9.17.0",
     "eslint-plugin-i18n-json": "^4.0.0",
