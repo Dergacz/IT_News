@@ -1,9 +1,10 @@
+import React from "react";
 import { classNames } from "shared";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/LangSwitcher";
 import styles from "./Navbar.module.scss";
 
-interface NavbarProps {
+export interface NavbarProps {
   className?: string;
 }
 

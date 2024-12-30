@@ -3,6 +3,7 @@ import { classNames } from "shared";
 import { useTheme } from "./providers/ThemeProvider/useTheme";
 import { Sidebar } from "widgets/Sidebar";
 import { Navbar } from "widgets/Navbar";
+import React from "react";
 import './styles/index.scss';
 
 const App = () => {
