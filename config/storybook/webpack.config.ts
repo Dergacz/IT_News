@@ -1,8 +1,7 @@
-import { S } from '@storybook/react/dist/public-types-8dd0ccdf';
-import { buildCssLoader } from '../build/loaders/buildCssLoader';
-import { BuildPaths } from '../build/types/config';
 import path from 'path';
 import webpack, { RuleSetRule } from 'webpack';
+import { buildCssLoader } from '../build/loaders/buildCssLoader';
+import { BuildPaths } from '../build/types/config';
 
 export default ({ config }: { config: webpack.Configuration}) => {
   const paths: BuildPaths = {
