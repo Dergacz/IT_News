@@ -1,15 +1,20 @@
 import '@testing-library/jest-dom'; 
 import 'regenerator-runtime/runtime';
+import { TextEncoder, TextDecoder } from 'util';
 
-const mockMatchMedia = () => ({
+const mockMatchMedia = (query: string) => ({
   matches: false,
-  addListener: () => {},
-  removeListener: () => {},
+  media: query,
+  onchange: null as ((this: MediaQueryList, ev: MediaQueryListEvent) => void) | null,
+  addListener: jest.fn(), // Deprecated
+  removeListener: jest.fn(), // Deprecated
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  dispatchEvent: jest.fn(),
 });
 
+// Assign the mockMatchMedia function to window.matchMedia
 window.matchMedia = window.matchMedia || mockMatchMedia;
 
-// Add TextEncoder/TextDecoder polyfill
-const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;

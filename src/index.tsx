@@ -1,4 +1,5 @@
 import { App, ThemeProvider } from 'app';
+import React from 'react';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
