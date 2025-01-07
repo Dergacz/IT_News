@@ -3,7 +3,7 @@ import { classNames } from 'shared';
 import { Button } from 'shared/ui/Button/Button';
 import styles from './PageError.module.scss';
 
-interface PageErrorProps {
+export interface PageErrorProps {
   className?: string;
 }
 

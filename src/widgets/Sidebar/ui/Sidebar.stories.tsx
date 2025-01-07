@@ -1,7 +1,6 @@
-import React from 'react';
-import { Sidebar, SidebarProps } from './Sidebar';
 import { Theme } from 'app/providers/ThemeProvider/ThemeContext';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Sidebar, SidebarProps } from './Sidebar';
 
 export default {
   title: 'widgets/Sidebar',

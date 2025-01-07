@@ -1,7 +1,6 @@
-import React from "react";
 import { classNames } from "shared";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/LangSwitcher";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher/ThemeSwitcher";
 import styles from "./Navbar.module.scss";
 
 export interface NavbarProps {

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button, ButtonVariant } from './Button';
 import { Theme } from 'app/providers/ThemeProvider/ThemeContext';
+import React from 'react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Button, ButtonVariant } from './Button';
 
 interface ButtonStoryArgs {
   children: React.ReactNode;

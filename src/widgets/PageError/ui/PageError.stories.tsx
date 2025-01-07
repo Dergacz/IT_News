@@ -1,13 +1,13 @@
-import { Theme } from 'app/providers/ThemeProvider/ThemeContext';
+import { PageError, PageErrorProps } from './PageError';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Navbar, NavbarProps } from './Navbar';
+import { Theme } from 'app/providers/ThemeProvider/ThemeContext';
 
 export default {
-  title: 'widgets/Navbar',
-  component: Navbar,
+  title: 'widgets/PageError',
+  component: PageError,
 };
 
-const Template = (args: NavbarProps) => <Navbar {...args} />;
+const Template = (args: PageErrorProps) => <PageError {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

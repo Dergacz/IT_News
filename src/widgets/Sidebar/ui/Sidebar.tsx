@@ -1,9 +1,8 @@
-import styles from "./Sidebar.module.scss";
-import React from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/helpers/classNames/classNames";
 import { AppLink } from "shared/ui/AppLink/AppLink";
+import styles from "./Sidebar.module.scss";
 
 export interface SidebarProps {
   className?: string;
