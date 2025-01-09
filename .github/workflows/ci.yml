@@ -9,8 +9,6 @@ on:
       - master
 
 jobs:
-  pipeline: 
-    runs-on: ubuntu-latest
 
   build:
     runs-on: ubuntu-latest
