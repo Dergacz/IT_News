@@ -17,11 +17,17 @@ export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.W
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    
   ];
 
   if (analyze) {
-    plugins.push(new BundleAnalyzerPlugin());
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }));
+  }
+
+  if(isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
   return plugins;
