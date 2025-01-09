@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: build prod
+        run: npm run build:prod
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run ESLint
+        run: npm run lint:scss
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run Storybook build
+        run: npm run storybook:build
+
+      - name: Run ui tests
+        run: npm run test:ui:ci
