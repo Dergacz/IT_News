@@ -66,7 +66,8 @@ export default [
         {
           filePath: "./public/locales/en/translation.json"
         }
-      ]
+      ],
+      "@typescript-eslint/no-unused-expressions": "off"
     }
   },
   {
