@@ -2,12 +2,15 @@
   position: relative;
   top: 0;
   left: 0;
+
   width: var(--sidebar-width);
   height: 100vh;
+
   background: var(--sidebar-primary-color);
-  transition: width 0.3s;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+
+  transition: width 0.3s;
 
   &.collapsed {
     width: var(--sidebar-width-collapsed);
