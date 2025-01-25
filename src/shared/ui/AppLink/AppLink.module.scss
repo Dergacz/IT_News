@@ -1,14 +1,31 @@
 .AppLink {
+  display: flex;
+  align-items: center;
+
+  margin: 0 10px;
   padding: 10px;
+
   color: inherit;
   text-decoration: none;
+
   border-radius: 6px;
 
   &.primary {
-    color: white;
+    color: var(--applink-primary-font-color);
 
     &:hover {
+      margin: 0 10px;
       background-color: var(--secondary-color);
+    }
+  }
+
+  .icon {
+    display: flex;
+    margin-right: 10px;
+
+    &.collapsed {
+      justify-content: center;
+      margin-right: 0;
     }
   }
 }

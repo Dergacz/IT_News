@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import pluginI18n from "eslint-plugin-i18n-json";
 import i18nextPlugin from "eslint-plugin-i18next";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -15,7 +16,8 @@ export default [
       }
     },
     plugins: {
-      "i18next": i18nextPlugin
+      "i18next": i18nextPlugin,
+      "react-hooks": pluginReactHooks 
     },
     rules: {
       "i18next/no-literal-string": ["warn", {
@@ -31,7 +33,9 @@ export default [
           "role", 
           "as"
         ]
-      }]
+      }],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
     }
   },
   {

@@ -1,5 +1,5 @@
 import { classNames } from "shared";
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./AppLink.module.scss";
 import { Link } from "react-router-dom";
 
@@ -12,13 +12,17 @@ interface AppLinkProps {
   className?: string;
   to: string;
   title: string;
+  icon: ReactNode;
+  isCollapsed?: boolean;
   variant?: AppLinkVariants;
 }
 
 export const AppLink = ({ 
   className,
-  to, 
-  title, 
+  to,
+  title,
+  icon,
+  isCollapsed = false,
   variant = AppLinkVariants.Primary
 }: AppLinkProps) => {
   return (
@@ -26,7 +30,19 @@ export const AppLink = ({
       className={classNames(styles.AppLink, {}, [className, styles[variant]])}
       to={to}
     >
-      {title}
+      <span className={
+        classNames(
+          styles.icon, 
+          {
+            [styles.collapsed]: isCollapsed
+          }
+        )}
+      >
+        {icon}
+      </span>
+      {
+        !isCollapsed && <span className={styles.title}>{title}</span>
+      }
     </Link>
   );
 };
