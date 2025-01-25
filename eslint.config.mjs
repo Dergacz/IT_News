@@ -44,6 +44,12 @@ export default [
       "i18next/no-literal-string": "off"
     }
   },
+  {
+    files: ["**/*.stories.{js,jsx,ts,tsx}"],
+    rules: {
+      "i18next/no-literal-string": "off"
+    }
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
