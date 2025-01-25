@@ -30,7 +30,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
         [className]
       )}>
       <div className={styles.headerWrapper}>
-        <Button 
+        <Button
+          data-testid="sidebar-toggle"
           onClick={onToggle} 
           className={styles.toggleButton}
           variant={ButtonVariant.Clear}
