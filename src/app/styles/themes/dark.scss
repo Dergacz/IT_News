@@ -1,8 +1,17 @@
 .app.dark {
-  --bg-color: #252525;
-  --primary-color: #24484E;
-  --secondary-color: #183A40;
+  // App
   --primary-font-color: #FDFDFD;
+  --bg-color: #252525;
+
+  // Sidebar
+  --sidebar-primary-color: #24484E;
+  --sidebar-primary-font-color: #FDFDFD;
+
+  // AppLink
+  --applink-primary-font-color: #FDFDFD;
+
+  --secondary-color: #183A40;
+
   --add-font-color: #929292;
   --primary-input-color: #717171;
   --secondary-input-color: #606060;

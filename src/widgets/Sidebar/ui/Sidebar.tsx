@@ -1,7 +1,9 @@
+import { AppLinks } from "entities/AppLinks/ui/AppLinks";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import CollapsedIcon from "shared/assets/icons/collapse-icon.svg";
 import { classNames } from "shared/helpers/classNames/classNames";
-import { AppLink } from "shared/ui/AppLink/AppLink";
+import { Button, ButtonVariant } from "shared/ui/Button/Button";
 import styles from "./Sidebar.module.scss";
 
 export interface SidebarProps {
@@ -27,13 +29,19 @@ export const Sidebar = ({ className }: SidebarProps) => {
         },
         [className]
       )}>
-      <div className={styles.linksWrapper}>
-        <AppLink to="/" title={t('main')} />
-        <AppLink to="/about" title={t('about')} />
+      <div className={styles.headerWrapper}>
+        <Button 
+          onClick={onToggle} 
+          className={styles.toggleButton}
+          variant={ButtonVariant.Clear}
+        >
+          <CollapsedIcon />
+        </Button>
+        {
+          !collapsed && <p className={styles.header}>{t('news')}</p>
+        }
       </div>
-      <button onClick={onToggle} data-testid="sidebar-toggle">
-        {collapsed ? 'Open' : 'Close'}
-      </button>
+      <AppLinks isCollapsed={collapsed} />
     </div>
   );
 };
