@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import styles from './Slider.module.scss';
 
 interface SliderProps {
@@ -30,6 +30,7 @@ export const Slider = ({
         max={max}
         step={step}
         onChange={handleChange}
+        style={{ '--value': ((value - min) / (max - min)) * 100 } as CSSProperties}
       />
       <div className={styles.valueDisplay}>{value}</div>
     </div>
