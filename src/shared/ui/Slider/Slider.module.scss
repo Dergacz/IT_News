@@ -20,9 +20,7 @@
     cursor: pointer; /* Change cursor on hover */
 
     width: 15px; /* Thumb width */
-    height: 15px; /* Thumb height */
-
-    appearance: none; /* Remove default styling */
+    height: 15px; /* Thumb height */ /* Remove default styling */
     appearance: none;
     background: #000; /* Thumb color */
     border-radius: 50%; /* Make it circular */
